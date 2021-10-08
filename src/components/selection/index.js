@@ -9,7 +9,7 @@ import { categoryDisplayOrder } from '../../constants';
 import Button from '../button';
 import Dropdown from '../dropdown';
 
-import * as ga from '../../../ga';
+import * as ga from '../../ga';
 
 export default function Selection({ config, setConfig }) {
   const [
@@ -92,6 +92,7 @@ export default function Selection({ config, setConfig }) {
           content="Download"
           options={['SVG', 'PNG']}
           onClick={(e) => {
+            console.log(ga);
             ga.event({ action: 'download', params: { ...config } });
             downLoadImage(e);
           }}

@@ -1,0 +1,11 @@
+.preview_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.preview_container {
+  height: 250px;
+}

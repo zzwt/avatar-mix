@@ -1,0 +1,27 @@
+.footer {
+  margin-top: 70px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.footer_bottom {
+  color: #909aad;
+  text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .footer_bottom {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}

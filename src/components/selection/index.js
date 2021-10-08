@@ -8,6 +8,9 @@ import { avatarConfig } from '../../config';
 import { categoryDisplayOrder } from '../../constants';
 import Button from '../button';
 import Dropdown from '../dropdown';
+
+import * as ga from '../../ga';
+
 export default function Selection({ config, setConfig }) {
   const [
     category,
@@ -88,7 +91,10 @@ export default function Selection({ config, setConfig }) {
         <Dropdown
           content="Download"
           options={['SVG', 'PNG']}
-          onClick={downLoadImage}
+          onClick={(e) => {
+            ga.event({ action: 'download', params: { ...config } });
+            downLoadImage(e);
+          }}
         />
       </div>
     </>

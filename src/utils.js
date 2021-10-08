@@ -44,6 +44,10 @@ export const downLoadImage = async (e) => {
   const type = e.target.value;
   const dom = document.querySelector('#avatar-preview');
   let base64Image;
+
+  // record download action
+  ga.event({ action: 'download', params: { ...config } });
+
   if (type.toLowerCase() === 'svg') {
     const svgElement = dom.querySelector('svg');
     const imageStr = new XMLSerializer().serializeToString(svgElement);

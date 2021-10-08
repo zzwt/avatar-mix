@@ -3,10 +3,6 @@ import styles from './styles.module.css';
 import { MdArrowDropDown, MdArrowDropUp } from 'react-icons/md';
 
 export default function Button({ content, onClick, options, ...rest }) {
-  // const classname = active
-  //   ? `${styles.button} ${styles.button_active}`
-  //   : styles.button;
-
   const [active, setActive] = useState(false);
 
   const toggleDropdown = () => {
@@ -39,12 +35,5 @@ export default function Button({ content, onClick, options, ...rest }) {
         )}
       </div>
     </>
-    //   <select onChange={downLoadImage}>
-    //   <option value="" selected disabled hidden>
-    //     Download
-    //   </option>
-    //   <option value="svg">SVG</option>
-    //   <option value="png">PNG</option>
-    // </select>
   );
 }

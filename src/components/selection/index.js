@@ -9,7 +9,7 @@ import { categoryDisplayOrder } from '../../constants';
 import Button from '../button';
 import Dropdown from '../dropdown';
 
-import * as ga from '../../ga';
+import * as ga from '../../../ga';
 
 export default function Selection({ config, setConfig }) {
   const [

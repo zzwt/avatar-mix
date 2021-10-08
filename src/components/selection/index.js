@@ -92,7 +92,6 @@ export default function Selection({ config, setConfig }) {
           content="Download"
           options={['SVG', 'PNG']}
           onClick={(e) => {
-            console.log(ga);
             ga.event({ action: 'download', params: { ...config } });
             downLoadImage(e);
           }}
